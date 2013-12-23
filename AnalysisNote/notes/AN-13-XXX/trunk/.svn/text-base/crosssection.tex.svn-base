@@ -1,0 +1,330 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Evaluation of the cross section ratio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The ratio of the cross sections ${\mathcal R}$ is defined 
+at the particle (e.g. hadron) level following closely the approach
+described in~\cite{Chatrchyan:1439313} starting from the yields
+$N^{\ell\ell+j}_{obs}$ ($N^{\ell\ell+b}_{obs}$) of events before
+(after) the b-tagging selection reported in the previous section. \\
+The numerator and the denominator of ${\mathcal R}$ are given respectively by: 
+\begin{equation}
+\sigma(pp \rightarrow Z+b+X) =
+\frac{N^{\ell\ell+b}_{obs}({\cal P}_b-f_{t\overline{t}})}{
+  \varepsilon_{vtx} \varepsilon^b_l {\cal C}^b_{had} \varepsilon_b {\cal L}_{int}}
+\label{eq:xsec_llb}
+\end{equation}
+and
+\begin{equation}
+\sigma(pp \rightarrow Z+j+X)=
+\frac{N^{\ell\ell+j}_{obs}-N^{\ell\ell+j}_{bkg}}{
+  \varepsilon_{vtx} \varepsilon^j_l {\cal C}^j_{had} {\cal L}_{int}}
+\label{eq:xsec_llj}
+\end{equation}
+Common factors in these two expressions which cancel in the ratio are:
+\begin{itemize}
+\item $\varepsilon_{vtx}$ the jet-dilepton vertex association
+  efficiency;
+\item ${\cal L}_{int}$ the integrated luminosity.
+\end{itemize}
+%Their values have been found to be compatible~\ref{tab:coeff_particle}
+%and when evaluating ${\mathcal R}$ their ratio is assumed to be one.
+The other correction factors in $\sigma(pp \rightarrow Z+b+X)$ are:
+\begin{itemize}
+\item $\varepsilon^b_l$ the lepton identification
+  efficiencies for the b tagged jet selection;  
+\item ${\cal P}_b$ the per event b purity;
+\item $f_{t\overline{t}}$ the fraction of $t\overline{t}$ events;
+\item ${\cal C}^b_{had}$ a factor correcting for the detector
+  resolution and reconstruction effects for events with at least one
+  reconstructed b tagged jet;
+\item $\varepsilon_b$ the efficiency of tagging an event with at least
+  one jet originating from a b hadron;  
+\end{itemize}  
+while in $\sigma(pp \rightarrow Z+j+X)$ are:
+\begin{itemize}
+\item $\varepsilon^j_l$ the lepton identification
+  efficiency for the any jet selection;
+\item $N^{\ell\ell+j}_{bkg}$ the number of background events;
+\item ${\cal C}^j_{had}$ a factor correcting for the detector
+  resolution and reconstruction effects for events with at least one
+  reconstructed jet of any flavour.
+\end{itemize}
+Finally the ratio is expressed as
+\[
+{\mathcal R} = 
+\frac{N^{\ell\ell+b}_{obs}(P_b-f_{t\overline{t}})}{N^{\ell\ell+j}_{obs}-N^{\ell\ell+j}_{bkg}}
+~\frac{\varepsilon^j_l}{\varepsilon^b_l}
+~\frac{{\cal C}^j_{had}}{{\cal C}^b_{had}}
+~\frac{1}{\varepsilon_b}
+\]
+
+The coefficients are extracted either relying on the sole simulation
+or using data driven methods as described in the next subsections.
+The values found are shown in Table~\ref{tab:coeff_particle}.
+\begin{table}[htbH]
+\begin{center}
+\caption{Correction factors used in Equations~\ref{eq:xsec_llb}
+  and~\ref{eq:xsec_llj} for extracting the cross sections.\label{tab:coeff_particle}} 
+\begin{tabular}{|l|c|c|}
+\hline
+& $\mu\mu$+b & $ee$+b \\
+\hline
+$\varepsilon_{vtx}$ & 0.9838$\pm$ & 0.9839$\pm$ \\
+$f_{t\overline{t}}$ & 0.107$\pm$0.007 & 0.111$\pm$0.008 \\
+${\cal P}_b$      & 0.735$\pm$0.015 & 0.743$\pm$0.017 \\
+\hline
+$\varepsilon^j_{\ell}$ & 0.741$\pm$0.001 & 0.644$\pm$0.001\\
+$\varepsilon^b_{\ell}$ & 0.736$\pm$0.005 & 0.655$\pm$0.007\\
+$\varepsilon_{b,had}$  & 0.332$\pm$0.007 & 0.342$\pm$0.008\\
+${\cal C}^j_{had}$     & 1.040$\pm$0.001 & 0.977$\pm$0.001\\
+${\cal C}^b_{had}$    & 0.926$\pm$0.003 & 0.893$\pm$0.004\\
+\hline
+$\varepsilon_{b,parton}$  & 0.327$\pm$0.007 & 0.337$\pm$0.008\\
+${\cal C}^j_{parton}$  & 0.947$\pm$0.001 & 0.890$\pm$0.001\\
+${\cal C}^b_{parton}$  & 0.766$\pm$0.004 & 0.732$\pm$0.005\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Correction factors estimated from simulation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The correction factors ${\cal C}^j_{had}$, ${\cal C}^b_{had}$,
+$\varepsilon^j_l$, $\varepsilon^b_l$, and ${\varepsilon_b}$
+are extracted from simulated events reweighted to match the
+distributions observed in the data.
+%in the expressions of cross section given above
+%have been evaulated using simulated events. 
+The coefficients are more easily defined introducing the following
+categories of events: 
+\begin{itemize}
+\item $gen_{Z,kin}$ : events with two generated leptons of desired
+  flavour and opposite charge, passing the cuts, before final state
+  radiation emission, $|\eta|<2.4$, $p_{T}>$ 20 GeV and with  
+  the invariant mass of the dilepton in the window 76$< m_{\ell\ell} <$ 106 GeV;
+%\item $gen_{Z_{kin}}$ : $gen_{Z}$ events with the generated leptons
+%  passing $\eta$ and $p_{T}$ acceptance cuts;  
+%\item $gen_{Z}$ : events with generated leptons, before final state
+%  radiation emission, of desired flavour with opposite charge and with
+%  the invariant mass of the dilepton in the invariant mass window 76
+%  $< m_{\ell\ell} <$ 106 GeV; 
+%\item $gen_{Z_{kin}}$ : $gen_{Z}$ events with the generated leptons
+%  passing $\eta$ and $p_{T}$ acceptance cuts;  
+\item $gen_{j}$ : events with the generated jet passing the $|\eta|<2.1$ and
+  $p_{T}>25$  GeV cuts and isolated with a cone of $\Delta R(\ell,j)=$ 0.5 with
+  respect to the generated leptons; 
+\item $gen_{b}$ : $gen_{J}$ events with a jet geometrically matched
+  with a b hadron (cone radius $\Delta R$=0.5). These jets will be called
+  generated $b$-hadron jets;
+\item $reco_{Z_{kin}}$ : events with reconstructed leptons, matched with generated
+  leptons (cone radius$\Delta R$=0.3) passing all $\eta$ and $p_{T}$ cuts
+  including the cut in the invariant mass 76 $< m_{\ell\ell} <$ 106
+  GeV; 
+\item $reco_{J}$ : events with a reconstructed jet passing all $\eta$
+  and $p_{T}$ acceptance cuts, out of a cone of radius $\Delta R(\ell,j)=$ 0.5
+  with the reconstructed leptons and matched with a generated jet of
+  any flavor; 
+\item $reco_{b}$ : events with a reconstructed jet passing all $\eta$
+  and $p_{T}$ cuts, out of a cone of $\Delta R(\ell,b)=$ 0.5 with the
+  reconstructed leptons and matched with a generated $b$-hadron jet.
+\end{itemize}
+The generated jets are jets reconstructed with the same algorithm,
+anti-$k_T$ with a cone parameter $\Delta R$=0.5, used for
+reconstructing jets in the data but taking as input electrons, muons,
+photons and hadrons, either stable or before their weak decay.   
+Results obtained using these generated jets will be referred to as
+``hadron level'' results.
+For completeness, results obtained with generated objects made with the
+same algorithm but using as input the partons before the hadronization
+step are also shown (``parton level'' results). \\
+
+Finally the previous factors in the cross section can be evaluated
+from counting events in the categories described above:
+\begin{align*}
+%  {\cal A}_{\ell}    &= \frac{\displaystyle N(gen_{Z_{kin}} | gen_{b})}{\displaystyle N(gen_{Z} | gen_{b})}  \\
+  {\cal C}_{had}      &= \frac{\displaystyle N(reco_{Z_{kin}} | reco_{b})}{\displaystyle N(gen_{Z_{kin}} | gen_{b,had})} \\
+  {\cal C}_{parton}   &= \frac{\displaystyle N(reco_{Z_{kin}} | reco_{b})}{\displaystyle N(gen_{Z_{kin}} | gen_{b,parton})} \\
+  \varepsilon_{\ell}  &= \frac{\displaystyle N(reco_{Z_{kin+ID+ISO}} | reco_{b})}{\displaystyle N(reco_{Z_{kin}} |reco_{b})} \\
+  \varepsilon_{b}    &= \frac{\displaystyle N(reco_{Z_{kin+ID+ISO}} | reco_{b} | \text{b-tag})}{\displaystyle N(reco_{Z_{kin+ID+ISO}} | reco_{b})} 
+\end{align*}
+where $ID + ISO$ means that the leptons passed the identification and
+isolation cuts and b-tag means that the jet passed the cut for the
+working point of the discriminant chosen for the analysis.
+% shows the values of the coefficients estimated from the simulation.
+%Table~\ref{tab:coeff_parton} shows the same values computed at the
+%parton level.
+
+
+The efficiency $\varepsilon_{b}$ for having at least a b tagged jet in
+the final state, is computed following event-by-event the prescription
+of the BTV POG  which requires to consider all the acceptable combinations of
+the $N_{jets}$ jets in the event with the discriminant satisfying the selection of
+Table~\ref{tab:evt_selection_cuts}, e.g. both those where the tagged
+jet is genuinely a jet associated to a b hadron, and those where the
+tagged jet is either associated to a c hadron or to a jet containing
+only light hadrons.
+The per-event weight is then defined summing separately, on all
+acceptable combinations, the numerator and the denominator of
+\[
+w_{event} =
+\frac{\displaystyle \sum_{combinations} \left(  \prod_{i=N_{jets}} \varepsilon_{b,jet}(i,k)
+  SF(k)\right)}{\displaystyle \sum_{combinations} \left(\prod_{i=N_{jets}} \varepsilon_{b,jet}(i,k)\right)}
+\]
+where $\varepsilon_{b,jet}(i,k)$ is the efficiency of tagging a jet of
+true flavour $k$ and $SF(k)$ is the corresponding data/MC scale factor
+provided by the BTV POG.
+Since  $\varepsilon_{b,jet}(i,k)$ depends on the specific analysis, we
+recomputed them for our selection.
+The values of the per-jet efficiency for the SSVHPT selection 
+used in this analysis for the and those used in
+the main one are compared in Figure~\ref{fig:effb_ssvhpt}
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=\textwidth]{figures/ssvhpt_comp}
+ \hspace{1cm} 
+   \caption{Top: per-jet efficiencies for genuine $b$ jets (left) or
+     genuine $c$ jets (right) for the SSVHPT selection as a
+     function of the $p_T$ of the jet in the barrel. 
+     Bottom: per-jet efficiencies for genuine $b$ jets (left) or
+     genuine $c$ jets (right) for the SSVHPT selection as a
+     function of the $p_T$ of the jet in the endcaps. 
+   \label{fig:effb_ssvhpt}} 
+ \end{center}
+\end{figure} 
+
+
+% \begin{table}[htbH]
+% \begin{center}
+% \caption{Correction factors used in Equations~\ref{eq:xsec_llb}
+%   and~\ref{eq:xsec_llj} for extracting the cross sections at the
+%   particle level.\label{tab:coeff_parton}} 
+% \begin{tabular}{|l|c|c|}
+% \hline
+% & $\mu\mu$+b & $ee$+b \\
+% \hline
+% $\varepsilon^j_{\ell}$ & 0.741$\pm$0.001 & 0.644$\pm$0.001\\
+% $\varepsilon^b_{\ell}$ & 0.736$\pm$0.005 & 0.655$\pm$0.007\\
+% $\varepsilon_{b}   $  & 0.327$\pm$0.007 & 0.337$\pm$0.008\\
+% \hline
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Coefficients estimated using data driven methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{$\varepsilon_{vtx}$}
+The efficiency $\varepsilon_{vtx}$ of retaining an event with a jet associated to the
+dilepton PV is computed from the fit to the $\beta$ distribution
+described in Section~\ref{sec:jetvtx}. 
+Even if this term is not required to compute ${\cal R}$, we extract it
+in order to compare the results of this analysis for the $Z+b$
+inclusive cross section with the one of the main analysis.
+Values of $\varepsilon_{vtx}$ are found to be identical in the
+$\mu\mu$+b and in $ee$+b samples. 
+
+\subsubsection{${\cal P}_b$}
+The fraction of events with a least one genuine $b$ jet tagged as such
+is computed from determining event-by-event the fraction of the
+genuine $b$ jets among those passing the SSVHPT
+selection of Table~\ref{tab:evt_selection_cuts}: 
+\[
+{\cal P}_b = 1 - (1-{\cal P}_{b,jet})^{N_{jets}}
+\]
+with $N_{jets}$ being the number of tagged jets in the event.
+The per-jet $b$ purity is extracted from a template fit to the distribution of
+the invariant mass $m_{SV}$ of the tracks forming the secondary vertex
+associated to the jet. Shapes of the $m_{SV}$ distribution  are
+derived from a QCD sample enriched in $b$ jets and reweighted to match
+the $p_T$ spectrum expected for the $Z+b$ signal and are kept
+fixed in the fit procedure.
+From the fit the fractions of jets associated to a b hadron ($f_b$)
+and to a c hadron ($f_c$) are extracted while the fraction of jets
+containing only light hadrons ($f_l$) is determined by the
+normalization constraint. Distributions of $m_{SV}$ are shown in
+Figure~\ref{fig:msv_ssvhpt}. 
+
+
+
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=\textwidth]{figures/finalfitssvhptSVmass_mm}
+\includegraphics[width=\textwidth]{figures/finalfitssvhptSVmass_ee}  
+ \hspace{1cm} 
+   \caption{Distribution of $m_{SV}$ the invariant mass formed with the tracks
+     associated to the secondary vertex for jets passing the SSVHPT
+     selection: dimuon (top) and dielectron (bottom). 
+     Values shown are the fractions of jets associated to the different
+     flavours as determined by the fit.
+     Simulated events are normalized to ${\cal L}_{int}$=5.21 fb$^{-1}$.     
+   \label{fig:msv_ssvhpt}}. 
+ \end{center}
+\end{figure} 
+ 
+
+\subsubsection{$f_{t\overline{t}}$}
+
+The fraction of the $t\overline{t}$ events in the signal region
+76$<m_{\ell\ell}<$106 GeV after the b tagging
+selection is estimated from the number of dilepton events in 
+a control region and correcting for the signal fraction in the control region:
+\begin{align*}
+N^{est}_{t\bar{t}}(in) &=  \left( \frac{\mathcal{R}^{MC}_{t\bar{t}}}{\mathcal{R}^{MC}_{Z} -\mathcal{R}^{MC}_{t\bar{t}}} \right) \times (\mathcal{R}^{MC}_{Z} \times N_{obs}(out) - N_{obs}(in) ) \\
+  \mathcal{R}^{MC}_{t\bar{t}} & =  N^{MC}_{t\bar{t}}(in)/
+  N^{MC}_{t\bar{t}}(out) \quad \mathrm{and} \quad  \mathcal{R}^{MC}_{Z}  = N^{MC}_{Z}(in)/ N^{MC}_{Z}(out)
+\end{align*}
+Distributions for the $\mu\mu$+b and $ee$+b channels are shown in Figure~\ref{fig:ftt_ssvhpt}.
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=\textwidth]{figures/MmumuNOMASSCUT_JetBTag_ssvhpt_Regions.pdf}
+\includegraphics[width=\textwidth]{figures/MeeNOMASSCUT_JetBTag_ssvhpt_Regions.pdf}  
+ \hspace{1cm} 
+   \caption{Distribution of the dilepton mass after the SSVHPT
+     selection: dimuon (top) and dielectron (bottom). 
+     The signal region 76$<m_{\ell\ell}<$106 GeV and that used for the estimation of
+     the $t\overline{t}$ background 106$<m_{\ell\ell}<$200 GeV are
+     indicated. $f_{t\overline{t}}^{est}$ ($f_{t\overline{t}}^{pred}$)
+     is the fraction of $t\overline{t}$ events determined in the data
+     (expected from simulation).
+     Simulated events are normalized to ${\cal L}_{int}$=5.21 fb$^{-1}$.     
+   \label{fig:ftt_ssvhpt}} 
+ \end{center}
+\end{figure} 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Results}
+%%%%%%%%%%%%%%%%%%%%%%
+Table~\ref{tab:results} shows the values of the $Z+b$ cross section
+and of the ratio ${\cal R}$ for the individual channels, $\mu\mu$+b and $ee$+b,
+and for the combined $\ell\ell$+b, with the combination made
+considering the statistical errors only. 
+
+\begin{table}[htbH]
+\begin{center}
+\caption{Results. Only statistical errors are shown.\label{tab:results}}
+\begin{tabular}{|l|c|c|c|}
+\hline
+& $\mu\mu$+b & $ee$+b & $\ell\ell$+b \\
+\hline
+$\sigma_{had}(pp \rightarrow Z+b+X)$ (pb) & 3.480$\pm$0.043   & 2.877$\pm$0.042   & 3.171$\pm$0.030   \\
+${\cal R}_{had}$                          & 0.0461$\pm$0.0003 & 0.0436$\pm$0.0003 & 0.0448$\pm$0.0004 \\
+\hline
+$\sigma_{parton}(pp \rightarrow Z+b+X)$ (pb) & 4.271$\pm$0.053    & 3.562$\pm$0.052    & 3.910$\pm$0.037  \\
+${\cal R}_{part}$                            & 0.0515$\pm$0.0003  & 0.0492$\pm$0.0003  & 0.0501$\pm$0.0005 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+

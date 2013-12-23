@@ -1,0 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Validation of the results}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item data-driven validation of 2012 corrections
+\item datasets
+\item definition of eta, pT bins for the different resonances
+\item description of the functions used for the fits
+\item smearing of the resolution in the simulation
+\item results
+\end{itemize}

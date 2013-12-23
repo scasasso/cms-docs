@@ -1,0 +1,20 @@
+K 10
+svn:ignore
+V 201
+*.bak
+*.sav
+pas-bib-atlas.py
+*.synctex
+biblist-plb.tex
+biblist.pdf
+*.tex
+biblist-plb.aux
+biblist-plb.bbl
+biblist-plb.blg
+biblist-plb.out
+biblist-plb.pdf
+biblist-plb.spl
+biblist-plb.synctex.gz
+test.bib
+
+END

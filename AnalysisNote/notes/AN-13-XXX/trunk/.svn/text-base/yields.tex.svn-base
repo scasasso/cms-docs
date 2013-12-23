@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Event yields and data/MC comparison}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Similarly to the main analysis, simulated events are reweighted in 
+order to take into account the discrepancies between data and simulation. 
+In particular weights are applied to improve the description of the
+average number of pileup vertices per event, the trigger,
+isolation and identification efficiencies of electrons and muons, the efficiency of
+tagging a jet as originating from a b hadron. For the pileup and the b tagging efficiency 
+we followed the prescription of the BTV POG and of the PVT groups. For the lepton efficiencies,
+the same correction factors of~\cite{CMS_AN_2012-303} are used.
+
+The total number of events selected in data and MC at the different
+stages of the analysis are summarised in the
+Tables~\ref{tab:evtyield_mu},~\ref{tab:evtyield_ele} and~\ref{tab:evtyield_all}.
+Lepton and jet selections are those outlined in
+Table~\ref{tab:obj_selection_cuts}.  ``Z($\ell\ell$)'' corresponds to
+the selection of a good dilepton candidate in the
+76$<m_{\ell\ell}<$106 GeV mass window; ``Z+j(vtx)'' requires the
+presence of a jet associated  the dilepton vertex with $\beta>0.1$;
+``Z+$\ge$1b(HE)'' and  ``Z+$\ge$1b(HP)'' refer to the yields after the
+SSVHEM or SSVHPT selection described in Table~\ref{tab:obj_selection_cuts}.
+%A fair agreement between data and MC is observed in both
+%SSVHEM and SSVHPT selections.
+%within \FIXME standard deviations at most of the expected
+%statistical uncertainties on the data. 
+
+Figures~\ref{fig:spectra_zll},~\ref{fig:spectra_zjvtx},~\ref{fig:spectra_zb_ssvhpt_z}
+and \ref{fig:spectra_zb_ssvhpt_b} illustrate the distributions of a
+set of relevant variables at the different stages of the selection.
+
+The agreement between the yields in data and in simulation is at the
+level of few percents. It should be noticed that in the ${\cal R}$
+measurement an overall deficit (or excess) of the data yield with 
+respect the MC one cancels.
+
+\begin{table}[hptb]
+\begin{center}
+{\footnotesize
+\caption{Event yields for the $\mu\mu$+b selection. Only statistical errors are shown. 
+Samples ``Z+b''/''Z+c''/''Z+l (light)'' are obtained from the same inclusive
+Drell-Yan sample categorized on the basis of the production mechanism.
+\label{tab:evtyield_mu}} 
+\setlength{\tabcolsep}{1pt} \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+Cut / Sample &  tt & ZZ & WZ & Z+b & Z+c & Z+l &  $\sum_{MC}$ & Data & Data/MC \\% ratio \\
+\hline
+Z($\ell\ell$) &  $ 1123 \pm 6$ &  $ 818 \pm 3$ &  $ 1352 \pm 6$ &  $ 89603 \pm 477$ &  $ 417710 \pm 1141$ &  $ 1112815 \pm 2295$ &  $ 1623420 \pm 2607$ &  $ 1709041 \pm 1307$ &  $ 1.05$ \\
+Z+j(vtx) &  $ 1078 \pm 6$ &  $ 575 \pm 2$ &  $ 964 \pm 5$ &  $ 22534 \pm 238$ &  $ 85596 \pm 517$ &  $ 188413 \pm 946$ &  $ 299160 \pm 1104$ &  $ 301020 \pm 549$ &  $ 1.01$  \\
+Z+$\ge$1b(HE) &  $ 770 \pm 5$ &  $ 82 \pm 1$ &  $ 50 \pm 1$ &  $ 6530 \pm 126$ &  $ 3643 \pm 104$ &  $ 1826 \pm 89$ &  $ 12900 \pm 186$ &  $ 13791 \pm 117$ &  $ 1.07$ \\
+Z+$\ge$1b(HP) &  $ 588 \pm 4$ &  $ 49 \pm 1$ &  $ 15 \pm 1$ &  $ 4339 \pm 101$ &  $ 1082 \pm 56$ &  $ 106 \pm 23$ &  $ 6178 \pm 118$ &  $ 6426 \pm 80$ &  $ 1.04$ \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+\begin{table}[hptb]
+\begin{center}
+{\footnotesize
+\caption{Event yields for the $ee$+b selection. 
+Samples ``Z+b''/''Z+c''/''Z+l (light)'' are obtained from the same inclusive
+Drell-Yan sample categorized on the basis of the production mechanism.
+Only statistical errors are shown.  \label{tab:evtyield_ele}} 
+
+\setlength{\tabcolsep}{1pt} \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+Cut / Sample &  tt & ZZ & WZ & Z+b & Z+c & Z+l &  $\sum_{MC}$ & Data & Data/MC \\%ratio\\
+\hline
+Z($\ell\ell$) &  $ 936 \pm 6$ &  $ 644 \pm 3$ &  $ 1067 \pm 6$ &  $ 67963 \pm 443$ &  $ 315629 \pm 1062$ &  $ 828704 \pm 2121$ &  $ 1214942 \pm 2413$ &  $ 1168253 \pm 1081$ & $ 0.96$ \\
+Z+j(vtx) &  $ 897 \pm 6$ &  $ 456 \pm 2$ &  $ 756 \pm 5$ &  $ 17464 \pm 223$ &  $ 65954 \pm 484$ &  $ 146475 \pm 891$ &  $ 232003 \pm 1039$ &  $ 214544 \pm 463$ & $ 0.92$ \\
+Z+$\ge$1b(HE) &  $ 634 \pm 5$ &  $ 65 \pm 1$ &  $ 38 \pm 1$ &  $ 5182 \pm 119$ &  $ 3077 \pm 102$ &  $ 1398 \pm 84$ &  $ 10394 \pm 178$ &  $ 9894 \pm 99$ & $ 0.95$ \\
+Z+$\ge$1b(HP) &  $ 480 \pm 4$ &  $ 39 \pm 1$ &  $ 12 \pm 1$ &  $ 3405 \pm 95$ &  $ 892 \pm 55$ &  $ 109 \pm 25$ &  $ 4937 \pm 112$ &  $ 4668 \pm 68$ & $ 0.95$ \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+\begin{table}[hptb]
+\begin{center}
+{\footnotesize
+\caption{Event yields for the combined $\ell \ell$ +b selection. 
+Samples ``Z+b''/''Z+c''/''Z+l (light)'' are obtained from the same inclusive
+Drell-Yan sample categorized on the basis of the production mechanism.
+Only statistical errors are shown. \label{tab:evtyield_all}} 
+\setlength{\tabcolsep}{1pt} \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+Cut / Sample &  tt & ZZ & WZ & Z+b & Z+c & Z+l &  $\sum_{MC}$ & Data & Data/MC\\ %ratio  \\
+\hline
+Z($\ell\ell$) &  $ 2058 \pm 9$ &  $ 1462 \pm 4$ &  $ 2419 \pm 9$ &  $ 157566 \pm 651$ &  $ 733339 \pm 1559$ &  $ 1941518 \pm 3125$ &  $ 2838362 \pm 3552$ &  $ 2877294 \pm 1696$ & $ 1.01$ \\
+Z+j(vtx) &  $ 1976 \pm 8$ &  $ 1031 \pm 3$ &  $ 1720 \pm 7$ &  $ 39998 \pm 326$ &  $ 151550 \pm 708$ &  $ 334887 \pm 1300$ &  $ 531163 \pm 1516$ &  $ 515564 \pm 718$ & $ 0.97$  \\
+Z+$\ge$1b(HE) &  $ 1404 \pm 7$ &  $ 147 \pm 1$ &  $ 88 \pm 2$ &  $ 11712 \pm 173$ &  $ 6720 \pm 145$ &  $ 3223 \pm 122$ &  $ 23294 \pm 257$ &  $ 23685 \pm 154$ & $ 1.02$ \\
+Z+$\ge$1b(HP) &  $ 1068 \pm 6$ &  $ 88 \pm 1$ &  $ 27 \pm 1$ &  $ 7744 \pm 139$ &  $ 1973 \pm 78$ &  $ 216 \pm 33$ &  $ 11116 \pm 163$ &  $ 11094 \pm 105$ & $ 1.00$  \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/ZLL_nvertices}
+\includegraphics[width=0.45\textwidth]{figures/ZLL_beta}
+ \hspace{1cm} 
+   \caption{``Z ($\ell\ell$)'' selection step: distribution of the number of reconstructed primary
+     vertices (left) and distribution of the $\beta$ variable for jets
+   associated to the primary vertex (right). Plots refer to the combined
+   $ee$+b and $\mu\mu$+b channels.} 
+   \label{fig:spectra_zll} 
+ \end{center}
+\end{figure} 
+
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/GoodJetAndVertexAssoc_jet1pt}
+\includegraphics[width=0.45\textwidth]{figures/GoodJetAndVertexAssoc_zmass}
+ \hspace{1cm} 
+   \caption{``Zj(vtx)'' selection step: distribution of the $p_T$ of the leading
+     jet (left) and mass of the dilepton pair (right). Plots refer to the combined
+   $ee$+b and $\mu\mu$+b channels.} 
+   \label{fig:spectra_zjvtx} 
+ \end{center}
+\end{figure} 
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/JetBTag_ssvhpt_zpt}
+\includegraphics[width=0.45\textwidth]{figures/JetBTag_ssvhpt_zmass}
+ \hspace{1cm} 
+   \caption{``Z+$\ge$1b(HP)'' selection step: distribution of the $p_T$ (left)
+     and of the mass (right) of the dilepton pair. Plots refer to the combined
+   $ee$+b and $\mu\mu$+b channels.}  
+   \label{fig:spectra_zb_ssvhpt_z} 
+ \end{center}
+\end{figure} 
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/JetBTag_ssvhpt_bjet1pt}
+\includegraphics[width=0.45\textwidth]{figures/JetBTag_ssvhpt_dphiZbj1}
+ \hspace{1cm} 
+   \caption{``Z+$\ge$1b(HP)'' selection step: distribution of the $p_T$ of the
+     leading b tagged jet (left) and of the angle (\FIXME 3D or 2D) 
+     between the leading b tagged jet and the dilepton pair (right).
+     Plots refer to the combined
+   $ee$+b and $\mu\mu$+b channels.} 
+   \label{fig:spectra_zb_ssvhpt_b} 
+ \end{center}
+\end{figure} 
+
+
+%GoodJetAndVertexAssoc_zpt_ratio.pdf
+
+
+
+

@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Calibration strategy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The MuScleFit algorithm~\cite{CMS_AN_2010-059} uses the spectrum of dimuons from the decay of
+reference resonances to determine biases in the momentum assigned to
+charged tracks and to estimate its resolution.
+For the calibration procedure described in this note, dimuons from the decay of
+Z bosons were used. 
+The model for the invariant mass spectrum of the dimuons 
+was taken from a NNLO calculation~\cite{Dittmaier:2009cr} adapted to
+kinematic cuts close to those used in the selection of reconstructed muons.
+\FIXME add background model 
+%\FIXME description of MF strategy (scale no $p_0$, resolution, scale $p_0$ only, resolution) /ingredients\\
+%\FIXME quote SDittmaier
+%The ansatz functions describing the scale
+%corrections and the resolution entering in the construction of
+%the likelihood are detailed below.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ansatz functions for scale corrections and resolution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The bias in the assignment of the momentum is mainly
+related to geometrical effects, e.g. deformations of the tracker
+geometry used in the reconstruction nevertheless present after the alignment procedure.
+For this reason scale corrections were implemented as corrections to the curvature
+$\kappa=q/p_T$ of the track.
+We modeled these corrections with an ansatz function defined in five bins of $\eta$ of the muon: 
+\begin{equation}
+\kappa' = (1+p_0) \left( \kappa -\frac{\delta}{2} - C_j(\eta,\varphi)  \right),
+\label{eq:scale_function}
+\end{equation}
+where $j$ is an index running on the $\eta$ bin: [-2.4,-2.1],
+[-2.1,-1.5], [-1.5,+1.5], [+1.5,+2.1] and [+2.1,+2.4].\\
+The different terms are:
+\begin{itemize}
+\item $p_0$ corresponding to a global correction to the scale accounting for effects
+  like inaccurate knowledge of the magnetic field;
+\item $\delta$ representing an absolute bias in the curvature, e.g. a
+  bias on the transverse momentum of the track different for negative
+  and positive muons;
+\item $C_j(\eta,\varphi)$ accounting for residual misalignment effects
+  in each of the five $\eta$ bins.
+  The functional form 
+  \[
+  C_j(\eta,\varphi) = a_{1,j} \sin(\varphi+\varphi_{1,j}) + a_{2,j}
+  \sin(2\varphi+\varphi_{2,j}) + b_j(\eta-\eta_{0,j}) + b_{0,j} 
+  \]
+  was choosen to model the weak modes more frequently
+  found in the post-alignment geometry, namely the sagitta ($a_{1,j}$), the
+  twist ($b_j$) and the elliptical ($a_{2,j}$) deformations. The
+  elliptical deformations were considered null everywhere apart from 
+  the first and last $\eta$ bin.
+\end{itemize}
+Table~\ref{tab:scale_parameters} shows the values of the fitted
+parameters found by MuScleFit. 
+Values of the coefficients $a_{1,j}$, $a_{2,j}$ and $b_j$ smaller than
+0.000001 GeV$^{-1}$ were considered null. Similarly values
+of $p_0$ smaller than 0.001 were considered zero as they 
+are consistent, within the systematic uncertainty 
+computed in Section~\ref{sec:systematics}, with the null value.
+%%%%%%%
+\begin{sidewaystable}[hbH]
+\begin{center}
+\caption{Values of the fitted parameters for the scale
+  correction~(Eq.~\ref{eq:scale_function}) for data and simulation
+  samples at 7 TeV and 8 TeV. The five sections in the downward part
+  of the table correspond to the five $\eta$ bins [-2.4,-2.1],
+[-2.1,-1.5], [-1.5,+1.5], [+1.5,+2.1] and [+2.1,+2.4]. The values of
+the $b_0$ parameters are fixed to guarantee the continuity of the
+correction function at the boundaries of the $\eta$ bins.\label{tab:scale_parameters}} 
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+Sample & 2011\_DATA\_44X & 2011\_MC\_44X & 2012ABC\_DATA\_ReReco\_53X & 2012D\_DATA\_ReReco\_53X & 2012\_MC\_53X\_smearReReco \\
+\hline
+$p_0$ & -0.00122  & 0.00021  & -0.00139  & -0.00135  & 0.00038  \\
+\hline
+$\delta$ & 0.00004  & 0.00004  & 0.00004  & 0.00004  & 0.00005  \\
+\hline
+$a_1$ & 0.00080  & 0.00022  & 0.00028  & 0.00025  & 0.00027  \\
+$\phi_1$ & 1.33254  & 0.28482  & 1.21602  & 1.21894  & 0.14179  \\
+$a_2$ & 0.00041  & 0.00030  & 0.00019  & 0.00017  & 0.00023  \\
+$\phi_2$ & 1.79848  & -1.68476  & 1.78374  & 1.93410  & -1.71046  \\
+$b$ & -0.00013  & -0.00007  & -0.00004  & -0.00005  & -0.00000  \\
+%$\eta_0$ (fixed) & -2.10000  & -2.10000  & -2.10000  & -2.10000  & -2.10000  \\
+$b_0$ & 0.00010  & -0.00001  & 0.00003  & 0.00004  & -0.00002  \\
+\hline
+$a_1$ & 0.00009  & 0.00006  & 0.00002  & 0.00000  & 0.00001  \\
+$\phi_1$ & 1.17708  & -1.13170  & 0.26269  & 0.15297  & -1.04015  \\
+$b$ & -0.00024  & 0.00003  & -0.00008  & -0.00009  & 0.00004  \\
+%$\eta_0$ (fixed) & -1.50000  & -1.50000  & -1.50000  & -1.50000  & -1.50000  \\
+$b_0$ & -0.00004  & 0.00000  & -0.00002  & -0.00002  & 0.00000  \\
+\hline
+$a_1$ & 0.00015  & 0.00007  & 0.00007  & 0.00007  & 0.00007  \\
+$\phi_1$ & -1.30574  & -1.75023  & -1.24722  & -1.39464  & -1.64733  \\
+$b$ & 0.00003  & -0.00000  & 0.00001  & 0.00001  & -0.00000  \\
+\hline
+$a_1$ & 0.00001  & 0.00013  & 0.00002  & 0.00001  & 0.00003  \\
+$\phi_1$ & 0.89885  & -1.40495  & 0.21788  & 1.17093  & -1.68410  \\
+$b$ & -0.00018  & -0.00000  & -0.00003  & -0.00003  & 0.00000  \\
+%$\eta_0$ (fixed) & 1.50000  & 1.50000  & 1.50000  & 1.50000  & 1.50000  \\
+$b_0$ & 0.00004  & -0.00000  & 0.00002  & 0.00002  & -0.00000  \\
+\hline
+$a_1$ & 0.00058  & 0.00014  & 0.00021  & 0.00032  & 0.00018  \\
+$\phi_1$ & 1.85334  & -1.42615  & 1.94164  & 1.89407  & -0.94791  \\
+$a_2$ & 0.00028  & 0.00001  & 0.00012  & 0.00008  & 0.00012  \\
+$\phi_2$ & -0.84138  & 0.78290  & -1.10183  & -1.23759  & 0.38600  \\
+$b$ & -0.00020  & -0.00001  & -0.00008  & -0.00010  & -0.00000  \\
+%$\eta_0$ (fixed) & 2.10000  & 2.10000  & 2.10000  & 2.10000  & 2.10000  \\
+$b_0$ & -0.00006  & -0.00000  & -0.00001  & -0.00000  & -0.00000  \\
+\hline
+\hline
+\end{tabular}
+\end{center}
+\end{sidewaystable}
+
+The resolution on $p_T$ was modeled as the sum in quadrature of two terms
+\begin{equation}
+\frac{\sigma(p_T)}{p_T}=q_0 p_T \oplus q_j
+\label{eq:resolution_function}
+\end{equation}
+where the parameters $q_j$, representing multiple Coulomb scattering
+effects, were computed separately in 12 equally spaced bins in $\eta$ 
+%
+\subsection{Fit strategy}
+% 
+The maximization of the likelihood was performed with a two-step
+approach. First, all the parameters of the correction
+function, with the exception of the global scale $p_0$, were estimated 
+for realistic values of the resolution function. In the second step
+the parameters of the resolution function were determined together
+with the global scale. 
+The fitted parameters were found to be stable against further
+iterations of the maximization procedure.
+
+

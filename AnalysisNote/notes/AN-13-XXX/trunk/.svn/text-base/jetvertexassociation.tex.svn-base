@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Association of the jets to the dilepton vertex}
+\label{sec:jetvtx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Jets not coming from the same proton-proton interaction
+of the dilepton, e.g. originating from pileup (PU) vertices,  
+are discarded using the variable $\beta$, the fraction of
+the jet $p_T$ carried by the charged particle tracks in the jet coming 
+from the same primary vertex (PV) as the dilepton, namely:
+\[
+\beta = \frac{  \displaystyle \sum_{i \in vtx,jet} p^{i}_{T}}{\displaystyle \sum_{j \in jet} p^{j}_{T}}
+\]
+where at the denominator the index $j$ runs on all the PF components of the
+jet. 
+In this analysis, the PV from which the dilepton originates is essentially always that
+with the highest value of the $\sum p_{T,i}^2$.
+In the data used for the analysis the mean of number of reconstructed
+PV is \FIXME for the runs in 2011A and \FIXME for those in 2011B.
+A sketch illustrating possible events coming from vertices of pileup is shown in Figure~\FIXME. 
+
+For jets not coming from pileup events the $\beta$ variable follows,
+over a wide range of values, to a good approximation, an exponential distribution function: 
+\[
+f(\beta) = \alpha~\exp^{\beta/\beta_0} .
+\]
+For very small $\beta$ the peak from pileup vertices dominates, while for
+$\beta \rightarrow 1$ the distribution reaches a saturation.
+We retain jets with $\beta>0.1$ and retain the event if there is at least one selected
+jet. No fine optimization of this cut has been performed.
+
+In order to compute the efficiency $\epsilon_{vtx}$ of retaining an event with a jet associated to the
+dilepton PV, the distribution of the $\beta$ of the jet with the largest $\beta$ in the event
+is analyzed separately for different PU multiplicities, from events
+with exactly one reconstructed PV ($n_{PU}$=0) to events with twenty
+  reconstructed PVs ($n_{PU}$=19). The distribution of the $\beta$
+  variable for all the jets in events with a selected dimuon is shown
+  in Figure~\ref{fig:betaAssoc_mmb} (left).
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=\textwidth]{figures/betaAssoc}
+ \hspace{1cm} 
+   \caption{Distribution of the largest $\beta$ in the event for events
+     with a selected dimuon: sum on on the pileup multiplicities
+     (left) distribution for a single pileup category, namely $n_{PU}$=5 or
+     events with four reconstructed PV (right).
+     All the 2011 data sample is shown. 
+   \label{fig:betaAssoc_mmb}} 
+ \end{center}
+\end{figure} 
+
+For each distribution:
+\begin{itemize}
+\item the parameters $\alpha$ and $\beta_{0}$ are determined from a
+  fit in a fiducial region far both from saturation and
+  from the peak of pileup events;
+\item the cumulative distribution function from $\beta=0$ up to an upper
+limit $\beta_{MAX}$, well below the saturation region, is evaluated analytically;
+\item  the number of events in bins with $\beta_{MAX}<\beta<1$,
+  indicated as $N^{\beta >\beta_{MAX}}_{DATA}$, is added.
+\end{itemize}
+\noindent An illustration of the fit for one specific pileup multiplicity is
+shown in Figure~\ref{fig:betaAssoc_mmb} (right).
+
+The efficiency $\epsilon_{\beta}$ of retaining the event for a specific PV multiplicity
+is computed as:
+\[
+\epsilon_{\beta} = \frac{\int_{0.1}^{\beta_{MAX}} f(\beta) + N^{\beta >\beta_{MAX}}_{DATA}}{\int_{0}^{\beta_{MAX}} f(\beta) + N^{\beta > \beta_{MAX}}_{DATA}  }
+\]
+
+
+The efficiency $\epsilon_{vtx}$ is then the weighted mean $\langle\beta \rangle$ of the efficiencies 
+in the twenty PU bins:
+
+\[
+\epsilon_{vtx}=\langle \epsilon_{\beta} \rangle = \frac{\displaystyle
+  \sum_{i=0}^{nPU} (\varepsilon^{i}_{\beta} 
+  N^{i}_{DATA})}{\displaystyle \sum_{i=0}^{nPU} N^{i}_{DATA}}
+\]
+
+The background fraction is defined as all the data in excess to the exponential
+in the fit region and in the bins of the histogram below the lower 
+range of the fit. 

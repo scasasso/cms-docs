@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comparison with the theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A reference value for ${\cal R}$ has been computed
+at NLO using the MCFM tool~\cite{Campbell:2003dd,Maltoni:2005wd,Campbell:2005zv} 
+and the following parameters: 
+\begin{itemize}
+\item factorization and renormalization scales: $\mu_F=\mu_R$=91 GeV
+\item PDF set: cteq6mE 
+\end{itemize}
+Table~\ref{tab:mcfm_scale_parameters} summarizes the results
+for the individual cross sections and for their ratio obtained with the
+above reference values and for a complete set of different renormalization and
+factorization scales changed from $\times$1/2 to $\times$2 or
+choosing as scale $M_Z^2+p^2_T(Z)$ or $<p_T^2(jet)>$.
+
+The relative changes of the individual cross sections and of their
+ratio as a function of $\mu_F$ and $\mu_F$ is shown in Figure~\ref{fig:zbzj_alphaRalphaF}.
+
+\begin{table}[htbH]
+\begin{center}
+\caption{Cross sections predicted for the $pp \rightarrow Z+b+X$ and $pp
+  \rightarrow Z+j+X$ processes by MCFM for different choices of the
+  factorization $\mu_F$ and renormalization $\mu_R$ scale. \label{tab:mcfm_scale_parameters}}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\mu_R$ (GeV) & $\mu_F$ (GeV) & $\sigma(pp \rightarrow Z+b+X)$ (pb) & $\sigma(pp \rightarrow Z+j+X)$ (pb) &
+  ${\cal R}$ \\
+\hline
+ 45.5 &  45.5 & 3.01$\pm$0.01 & 71.5$\pm$0.3 & 0.042 \\
+ 45.5 &  91.0 & 3.15$\pm$0.01 & 72.4$\pm$0.3 & 0.044 \\
+ 45.5 & 182.0 & 3.33$\pm$0.01 & 72.3$\pm$0.3 & 0.046 \\
+ 91.0 &  45.5 & 2.83$\pm$0.01 & 67.6$\pm$0.3 & 0.042 \\
+ 91.0 &  91.0 & 3.02$\pm$0.01 & 68.1$\pm$0.3 & 0.044 \\
+ 91.0 & 182.0 & 3.19$\pm$0.01 & 68.6$\pm$0.3 & 0.047 \\
+182.0 &  45.5 & 2.68$\pm$0.01 & 63.4$\pm$0.3 & 0.042 \\
+182.0 &  91.0 & 2.90$\pm$0.01 & 64.3$\pm$0.3 & 0.045 \\
+182.0 & 182.0 & 3.06$\pm$0.01 & 65.3$\pm$0.3 & 0.047 \\
+$\sqrt{M_Z^2+p^2_T(Z)}$ & $\sqrt{M_Z^2+p^2_T(Z)}$ & 3.04$\pm$0.01 & 67.2$\pm$0.3 & 0.045 \\
+$\sqrt{<p_T^2(jet)>}$   & $\sqrt{<p_T^2(jet)>}$  & 2.96$\pm$0.01 & 71.0$\pm$0.3 & 0.042 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=\textwidth]{figures/zbzj_alphaRalphaF}
+ \hspace{1cm} 
+   \caption{Top: relative variations of  $\sigma(pp\rightarrow Z+b+X)$ and $\sigma(pp\rightarrow Z+j+X)$
+     as a function of $\mu_F$ and $\mu_R$. Reference values are computed for $\mu_F=\mu_R$=91 GeV.
+     Bottom: same but for the ratio ${\cal R}$. The three intervals on
+     the axes correspond to the
+     three different scales tested: 45.5, 91 and 182 GeV.} 
+   \label{fig:zbzj_alphaRalphaF} 
+ \end{center}
+\end{figure} 
+
+ 
+PDF uncertainties were computed fixing $\mu_F=\mu_R$=91 GeV and taking
+different sets of the cteq6mE PDF in MCFM. Results for the sets giving
+the largest variation of the cross-section ratio are shown in
+Table~\ref{tab:mcfm_pdf_parameters}. 
+\begin{table}[htbH]
+\begin{center}
+\caption{Cross sections predicted for the $pp \rightarrow Z+b+X$ and $pp
+  \rightarrow Z+j+X$ processes by MCFM for the choices of the
+  cteq6mE PDF sets producing the largest variation on ${\cal R}$. 
+  \label{tab:mcfm_pdf_parameters}}
+\begin{tabular}{|l|c|c|c|}
+\hline
+ & $\sigma(pp\rightarrow Z+b+X)$ (pb) & $\sigma(pp\rightarrow Z+j+X)$ (pb) &
+  ${\cal R}$ \\
+\hline
+ PDF error set   8  & 2.92$\pm$0.01 & 68.1$\pm$0.3 & 0.043 \\
+ PDF error set  29  & 3.08$\pm$0.01 & 68.8$\pm$0.3 & 0.045 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Taking the largest deviation as uncertainty, the predicted value is:
+\[
+{\cal R}_{MCFM}=0.044^{+0.003}_{-0.002}.
+\]
+The largest variation of ${\cal R}$ is found when changing the
+factorization scale $\mu_F$ from 91 GeV to 182 GeV.

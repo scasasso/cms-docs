@@ -1,0 +1,61 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\section{Results with the SSVHEM selection}
+\label{app:ssvhem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For completeness we report in this Appendix the results of the
+analysis when events are selected requiring at least one jet tagged by
+the SSVHEM discriminant.
+The coefficients used in Equations~\ref{eq:xsec_llb}
+  and~\ref{eq:xsec_llj} are shown in
+  Table~\ref{tab:coeff_particle_ssvhem}, results are shown in
+  Table~\ref{tab:results_ssvhem}. 
+The results obtained are compatible with those derived using the
+SSVHPT selection.
+
+\begin{table}[hbH]
+\begin{center}
+\caption{Correction factors used in Equations~\ref{eq:xsec_llb}
+  and~\ref{eq:xsec_llj} for extracting the cross sections with the SSVHEM selection.\label{tab:coeff_particle_ssvhem}} 
+\begin{tabular}{|l|c|c|}
+\hline
+& $\mu\mu$+b & $ee$+b \\
+\hline
+$\varepsilon_{vtx}$ & 0.9838$\pm$ & 0.9839$\pm$ \\
+$f_{t\overline{t}}$ & 0.064$\pm$0.004 & 0.069$\pm$0.005 \\
+${\cal P}_b$      & 0.492$\pm$0.010 & 0.509$\pm$0.011 \\
+\hline
+$\varepsilon^j_{\ell}$ & 0.741$\pm$0.001 & 0.644$\pm$0.001\\
+$\varepsilon^b_{\ell}$ & 0.736$\pm$0.005 & 0.655$\pm$0.007\\
+$\varepsilon_{b}$     & 0.489$\pm$0.007 & 0.501$\pm$0.009\\
+${\cal C}^j_{had}$     & 1.040$\pm$0.001 & 0.977$\pm$0.001\\
+${\cal C}^b_{had}$    & 0.926$\pm$0.003 & 0.893$\pm$0.004\\
+\hline
+$\varepsilon_{b,parton}$  & 0.4837$\pm$0.007 & 0.494$\pm$0.009\\
+${\cal C}^j_{parton}$  & 0.947$\pm$0.001 & 0.890$\pm$0.001\\
+${\cal C}^b_{parton}$  & 0.766$\pm$0.004 & 0.732$\pm$0.005\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Table~\ref{tab:results} shows the values for the individual channels $\mu\mu$+b and $ee$+b
+and for the combined $\ell\ell$+b, with the combination made
+considering the statistical errors only. 
+
+\begin{table}[htbH]
+\begin{center}
+\caption{Results. Only statistical errors are shown.\label{tab:results_ssvhem}}
+\begin{tabular}{|l|c|c|c|}
+\hline
+& $\mu\mu$+b & $ee$+b & $\ell\ell$+b \\
+\hline
+$\sigma_{had}(pp \rightarrow Z+b+X)$ (pb) & 3.455$\pm$0.029   & 2.898$\pm$0.029   & 3.177$\pm$0.021  \\
+${\cal R}_{had}$                          & 0.0457$\pm$0.0004 & 0.0440$\pm$0.0005 & 0.0449$\pm$0.0003 \\
+\hline
+$\sigma_{parton}(pp \rightarrow Z+b+X)$ (pb) & 4.177$\pm$0.036   & 3.535$\pm$0.036   & 3.856$\pm$0.035  \\
+${\cal R}_{parton}$                          & 0.0503$\pm$0.0004 & 0.0489$\pm$0.0005 & 0.0494$\pm$0.0003 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

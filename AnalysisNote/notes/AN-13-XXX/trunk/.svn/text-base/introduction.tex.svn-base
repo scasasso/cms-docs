@@ -1,0 +1,77 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%
+In this note we investigate the measurement of the ratio of the cross
+section for the inclusive production of a $b$-jet in association with a
+Z boson~\footnote{More precisely 
+events are selected if there is a dimuon or a dilepton with an invariant 
+mass in the range between 76 and 106 GeV. We refer to these dileptons as
+"Z boson" but no attempt to separate the Z from the $\gamma^*$ component
+is made in the analysis.}, defined as $Z+b$, to the cross section for
+the inclusive production of a jet of any flavour in association with a
+Z boson, defined as $Z+j$:
+\[
+{\mathcal R} = \frac{\sigma(pp \rightarrow Z+b+X)}{\sigma(pp
+  \rightarrow Z+j+X)} .
+\]
+In the ratio ${\mathcal R}$ most of the experimental uncertainties cancel
+out. Also the prediction is less sensitive to the choice
+of the theory parameters like the set of PDF's and of the renormalization
+and factorization scales.\\
+The procedure for the selection of the events and for the extraction
+of the cross sections described in this note follows closely the one 
+described in the companion note~\cite{CMS_AN_2012-303}. In particular we use the
+same data and simulation samples and apply the same reconstruction 
+of the leptons and of the jets and the same kinematic cuts
+on the $p_T$ and $\eta$ of these objects~(Table~\ref{tab:obj_selection_cuts}).
+The main difference with respect to the main analysis is related to the
+presence of pileup jets which could mimick a Z+jet event affecting in
+a different way the $Z+b$ and the $Z+j$ rates. 
+Therefore after the selection of a good dilepton candidate, performed
+as in~\cite{CMS_AN_2012-303}, we retain only the jets reconstructed in the event 
+associated to the dilepton vertex as detailed in the following
+section. Then these jets have to pass the same kinematic cuts on the jets
+as in~\cite{CMS_AN_2012-303} and finally out of them we select only
+the events where at least one jet is classified as originating from a
+b hadron according to the 'simple secondary vertex' (SSV) algorithm.
+The selected dilepton mass range and the cut on the b-tagging discriminant are 
+reported in Table~\ref{tab:evt_selection_cuts}.
+The main results of this analysis are those obtained with the SSVHPT
+selection. In the Appendix~\ref{app:ssvhem} results obtained with the SSVHEM selection
+are reported for comparison.
+
+\begin{table}[htbH]
+\begin{center}
+\caption{Selection cuts on leptons and jets \label{tab:obj_selection_cuts}}
+\begin{tabular}{|l|c|c|}
+\hline
+object & reconstruction and identification & acceptance cuts \\ 
+\hline
+muons                 & PF muon, VBTF 'tight'                                  & $p^{\mu}_T>$20 GeV, $|\eta^{\mu}|<$2.4 \\
+\hline
+electrons             & GSF electron, WP 'medium'                              & $p^{e}_T>$20 GeV, $|\eta^{e}|<$2.4 \\
+\hline
+\multirow{2}{*}{jets} & \multirow{2}{*}{PF jet with anti-$k_T$ and $\Delta R$=0.5} & $p^{j}_T>$25 GeV, $|\eta^{j}|<$2.1 \\  
+& & $\Delta R(\ell,j)>$0.5 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htbH]
+\begin{center}
+\caption{Selection cuts on events \label{tab:evt_selection_cuts}}
+\begin{tabular}{|c|}
+\hline
+76$<m_{\ell\ell}<$106 GeV\\
+%MET significance $<$ 10\\
+for the $\ell\ell$+b SSVHEM analysis: $D_{SSVHE}>$1.74 \\
+for the $\ell\ell$+b SSVHPT analysis: $D_{SSVHP}>$2.00 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The results described in this note are obtained with an integrated luminosity
+of 5.21 fb$^{-1}$ at $\sqrt{s}$=7 TeV  corresponding to the full 2011 sample of
+proton-proton collisions.
