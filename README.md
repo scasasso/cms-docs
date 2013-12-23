@@ -1,6 +1,8 @@
 cms-docs
 ========
 
+based on https://twiki.cern.ch/twiki/bin/view/Main/HowtoNotesInCMS
+
 cd AnalysisNote/
 
 eval `notes/tdr runtime -sh`
