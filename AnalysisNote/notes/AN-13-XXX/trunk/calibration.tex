@@ -13,7 +13,7 @@ those used in the selection of reconstructed muons, and an
 exponentially falling background. The decay constants of the
 exponential were determined separetely in nine bins depending on the
 pseudorapidities of the two muons.
-\FIXME expand description of the background model 
+\FIXME add eta binning for the background model 
 % $\eta(\mu^+)$ $\eta(\mu^-)$ 
 %\FIXME description of MF strategy (scale no $p_0$, resolution, scale $p_0$ only, resolution) /ingredients\\
 %\FIXME quote SDittmaier
@@ -65,7 +65,8 @@ Offsets with respect the nominal mass of the Z up to 2 GeV are observed.
 Offsets are also observed in simulated events
 (Figure~\ref{fig:etaphi_44X_before} right) as the conditions of 
 the detector used in the reconstruction of simulated events reproduce the
-level of knowledge of the detector in the data.
+level of knowledge of the detector in the data, hereafter referred to
+as {\sl realistic} conditions.
 \begin{figure}[hbtp]  
 \begin{center}
 \includegraphics[width=0.45\textwidth]{figures/TkAl_Style/Data2011_44X/MassVsEtaPhiPlus_file0}
@@ -110,9 +111,9 @@ The terms in Eq.~\ref{eq:scale_function} are:
   twist (described by $b_j$) and the elliptical (described
   by $a_{2,j}$) deformations~\footnote{
     The three weak modes correspond to the following parametric deformations:
-    $r\Delta\varphi = c_s \cos\varphi$ {\sl sagitta},
-    $\Delta\varphi = c_t z$  {\sl twist} and 
-    $\Delta r = r (1- c_e \cos 2\varphi) $  {\sl elliptical}
+    $r\Delta\varphi = c_s \cos\varphi$ ``sagitta'',
+    $\Delta\varphi = c_t z$  ``twist'' and 
+    $\Delta r = r (1- c_e \cos 2\varphi)$  ``elliptical''
     with $c_s$, $c_t$ and $c_e$ being the approriate constants.}. 
   The elliptical deformations were considered null everywhere apart from 
   the first and last $\eta$ bin.
@@ -124,16 +125,16 @@ The resolution on $p_T$ was modeled as the sum in quadrature of two terms
 \end{equation}
 where the parameters $q_j$, representing multiple Coulomb scattering
 effects, were computed separately in 12 equally spaced bins in $\eta$. 
-\FIXME expand resolution? 
+\FIXME add a table/plot of the resolution parameters 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fit strategy and results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The maximization of the likelihood was performed in two steps. 
-First, all the parameters of the correction
-function, with the exception of the global scale $p_0$, were estimated 
-for realistic guess values of the resolution function. In the second step
-the parameters of the resolution function were determined together
-with the global scale $p_0$. 
+The maximization of the likelihood was performed in four steps. First
+values for the resolution function before any correction are
+estimated. In the second step we fit all the parameters of the correction function with
+the exception of the global scale $p_0$. Then 
+the post-correction parameters of the resolution function are obtained.
+The last step consists in fitting the global scale $p_0$. 
 The fitted parameters were found to be stable against further
 iterations of the maximization procedure.\\
 Table~\ref{tab:scale_parameters} shows the values of the 
@@ -155,7 +156,7 @@ the $b_0$ parameters are fixed to guarantee the continuity of the
 correction function at the boundaries between the $\eta$ bins.\label{tab:scale_parameters}} 
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
-Sample & 2011\_DATA\_44X & 2011\_MC\_44X & 2012ABC\_DATA\_ReReco\_53X & 2012D\_DATA\_ReReco\_53X & 2012\_MC\_53X\_smearReReco \\
+Sample & 2011\_DATA\_44X & 2011\_MC\_44X & 2012ABC\_DATA\_ReReco\_53X & 2012D\_DATA\_ReReco\_53X & 2012\_MC\_ReReco\_53X \\
 \hline
 $p_0$ & -0.00122  & 0.00000  & -0.00139  & -0.00135  & 0.00000  \\
 \hline
@@ -200,7 +201,7 @@ $b_0$ & -0.00006  & 0.00000  & -0.00001  & 0.00000  & 0.00000  \\
 
 Figure~\ref{fig:etaphi_44X_after} shows the 
 mass of the Z extracted from the dimuon spectrum in bins of
-($\varphi$,$\eta$) of the positive muon for the data (left) and simulated
+($\varphi$,$\eta$) of the positive muon for the real (left) and simulated
 events (right) at $\sqrt{s}$=7~TeV after applying the corrections: 
 an overall improvement with respect Figure~\ref{fig:etaphi_44X_before}
 is clearly seen with the exception of few bins where the granularity
@@ -210,7 +211,7 @@ of the correction of Eq.~\ref{eq:scale_function} is too coarse.
 \includegraphics[width=0.45\textwidth]{figures/TkAl_Style/Data2011_44X/MassVsEtaPhiPlus_file1}
 \includegraphics[width=0.45\textwidth]{figures/TkAl_Style/MC2011_44X/MassVsEtaPhiPlus_file1}
  \hspace{1cm} 
-   \caption{Mass of the Z extracted from the specturm of the dimuon
+   \caption{Mass of the Z extracted from the spectrum of the dimuon
      invariant mass for real (left) and simulated (right) events at $\sqrt{s}$=7 TeV, after
      applying the corrections computed with MuScleFit.
    \label{fig:etaphi_44X_after}}
@@ -219,7 +220,7 @@ of the correction of Eq.~\ref{eq:scale_function} is too coarse.
 The beneficial effect of the corrections can be appreciated also
 inspecting the resolution of the mass of the Z boson before and after the
 corrections. This is shown as a function of the $\eta$ of the positive
-muon in Figure~\ref{fig:SigmaVsEta_44X} for data (left) and simulated (right) events 
+muon in Figure~\ref{fig:SigmaVsEta_44X} for real (left) and simulated (right) events 
 at $\sqrt{s}$=7~TeV. 
 \begin{figure}[hbtp]  
 \begin{center}

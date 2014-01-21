@@ -1,10 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%
-\FIXME{Outline of Introduction}
+\FIXME Outline of Introduction
 \begin{itemize}
 \item bla-bla on uncertainties in track reconstruction
-\item definition of the datasets used
 \item event/track selection
 \item outline of the structure of the note
 \end{itemize}
@@ -15,3 +14,37 @@
 %distribution/density. In this note the MuScleFit algorithm~\cite{XXX} is used to correct thise effects and extract an estimate %of the transverse momentum resolution. The method is based on an unbinned maximum
 %likelihood fit to calibrate the data with a reference model of the J/y.
 %This note is organized as follows: first a 
+
+%%%%%%%
+\begin{table}[hbH]
+\begin{center}
+\caption{Datasets corresponding to the different samples of data and
+  simulated events used for the study of the muon momentum scale at
+  $\sqrt{s}$=7 TeV and $\sqrt{s}$=8 TeV. ``Label'' is 
+  how the samples are indicated in Table~\ref{tab:scale_parameters}.\label{tab:datasets}}
+\resizebox{\textwidth}{!}{\begin{tabular}{|lll|}
+\hline
+$\sqrt{s}$ & Dataset & Label \\
+\hline
+7 TeV & /DoubleMu/Run2011A-08Nov2011-v1,           &2011\_DATA\_44X      \\
+                 & /DoubleMu/Run2011B-19Nov2011-v1 &                     \\
+ & /DYJetsToLL\_TuneZ2\_M-50\_7TeV-madgraph-tauola/Fall11-PU\_S6\_START44\_V9B-v1                                    &2011\_MC\_44X        \\
+\hline
+8 TeV & /DoubleMu/Run2012A-22Jan2013-v1,     &2012ABC\_DATA\_ReReco\\
+                & /DoubleMuParked/Run2012B-22Jan2013-v1,    & \\ 
+                & /DoubleMuParked/Run2012C-22Jan2013-v1     & \\
+ & /DoubleMuParked/Run2012D-22Jan2013-v1                                                                             &2012D\_DATA\_ReReco\_53X  \\
+ & /DYJetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph-tarball/DR53X-PU\_S10\_START53\_V7A-v1                               &2012\_MC\_ReReco\_53X     \\
+ & /Upsilon1SToMuMu\_2MuPtEtaFilter\_tuneD6T\_8TeV-pythia6-evtgen/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1           & \\
+ & /JPsiToMuMu\_2MuPtEtaFilter\_tuneD6T\_8TeV-pythia6-evtgen/Summer12\_DR53X-PU\_S10\_START53\_V7A-v2                 & \\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+%The sample of events Table~\ref{tab:datasets} shows the data
+
+%/MuOnia/Run2012A-13Jul2012-v1/AOD
+%/MuOnia/Run2012B-13Jul2012-v1/
+%MuOnia/Run2012C-PromptReco-v2/AOD
+%Upsilon1SToMuMu_2MuPtEtaFilter_tuneD6T_8TeV-pythia6-evtgen/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+%JPsiToMuMu_2MuPtEtaFilter_tuneD6T_8TeV-pythia6-evtgen/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSI
