@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%
-\FIXME Outline of Introduction
-\begin{itemize}
-\item bla-bla on uncertainties in track reconstruction
-\item event/track selection
-\item outline of the structure of the note
-\end{itemize}
+%% \FIXME Outline of Introduction
+%% \begin{itemize}
+%% \item bla-bla on uncertainties in track reconstruction
+%% \item event/track selection
+%% \item outline of the structure of the note
+%% \end{itemize}
 %The measurement of track momentum is affected by the reconstruction \ldots
 %capability and our limited knowledge about the physical configuration
 %of the detector. The main sources of biases in the momentum measurement are from residual misalignments and
@@ -14,33 +14,31 @@
 %distribution/density. In this note the MuScleFit algorithm~\cite{XXX} is used to correct thise effects and extract an estimate %of the transverse momentum resolution. The method is based on an unbinned maximum
 %likelihood fit to calibrate the data with a reference model of the J/y.
 %This note is organized as follows: first a 
+A precise and unbiased measurement of charged track parameters, most important among these
+the transverse momentum $p_{T}$, is crucial for the CMS experiment, which is expected to deliver
+important precision measurements such as the top quark and $W$ boson masses, or the mass of
+the newly discovered Higgs boson. \\
+The transverse momentum determination is affected by the details of the detector integration and
+operation, in particular the alignment of the silicon tracker detector and the muon chambers, 
+the material budget in the sensible volume and the knowledge of the magnetic field. 
+Given these sources of bias, the calibration of charged track momentum as well as the
+investigation of the residual systematic effects are mandatory for all the CMS analysis aiming
+at a precision measurement, such as the ones mentioned above.\\
+The MuScleFit algorithm~\cite{CMS_AN_2010-059} implements a multi-dimensional likelihood fit to 
+the spectrum of dimuons from the decay of
+reference resonances, such as $J/\psi,\, \Upsilon(1S),\, Z$, to determine biases in the momentum assigned to
+charged tracks and to estimate its resolution. More details on the likelihood construction and 
+the technical implementation in the CMS software can be found elsewhere~\cite{CMS_AN_2010-059}.\\
+This note describes the details of the muon momentum scale corrections derived with the MuScleFit 
+algorithm using approximatevely $5\,\mathrm{fb}^{-1}$ and $19.5\,\mathrm{fb}^{-1}$ of pp 
+collisions data coming from the Run 1 of the LHC at a center of mass energy 
+of 7 TeV and 8 TeV respectively and it is organized as follows. Section \ref{sec:calibration} describes 
+in details the calibration strategy and the datasets used. Section \ref{sec:validation} presents the 
+results of a the validation of calibrated muons. Section \ref{sec:systematics} describes the method and 
+results of the estimation of the residual systematic uncertainty on the muon momentum scale 
+after the calibration.
 
-%%%%%%%
-\begin{table}[hbH]
-\begin{center}
-\caption{Datasets corresponding to the different samples of data and
-  simulated events used for the study of the muon momentum scale at
-  $\sqrt{s}$=7 TeV and $\sqrt{s}$=8 TeV. ``Label'' is 
-  how the samples are indicated in Table~\ref{tab:scale_parameters}.\label{tab:datasets}}
-\resizebox{\textwidth}{!}{\begin{tabular}{|lll|}
-\hline
-$\sqrt{s}$ & Dataset & Label \\
-\hline
-7 TeV & /DoubleMu/Run2011A-08Nov2011-v1,           &2011\_DATA\_44X      \\
-                 & /DoubleMu/Run2011B-19Nov2011-v1 &                     \\
- & /DYJetsToLL\_TuneZ2\_M-50\_7TeV-madgraph-tauola/Fall11-PU\_S6\_START44\_V9B-v1                                    &2011\_MC\_44X        \\
-\hline
-8 TeV & /DoubleMu/Run2012A-22Jan2013-v1,     &2012ABC\_DATA\_ReReco\\
-                & /DoubleMuParked/Run2012B-22Jan2013-v1,    & \\ 
-                & /DoubleMuParked/Run2012C-22Jan2013-v1     & \\
- & /DoubleMuParked/Run2012D-22Jan2013-v1                                                                             &2012D\_DATA\_ReReco\_53X  \\
- & /DYJetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph-tarball/DR53X-PU\_S10\_START53\_V7A-v1                               &2012\_MC\_ReReco\_53X     \\
- & /Upsilon1SToMuMu\_2MuPtEtaFilter\_tuneD6T\_8TeV-pythia6-evtgen/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1           & \\
- & /JPsiToMuMu\_2MuPtEtaFilter\_tuneD6T\_8TeV-pythia6-evtgen/Summer12\_DR53X-PU\_S10\_START53\_V7A-v2                 & \\
-\hline
-\end{tabular}}
-\end{center}
-\end{table}
+
 %The sample of events Table~\ref{tab:datasets} shows the data
 
 %/MuOnia/Run2012A-13Jul2012-v1/AOD

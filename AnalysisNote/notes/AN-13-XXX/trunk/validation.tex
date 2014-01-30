@@ -1,5 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Validation of the results}
+\label{sec:validation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{itemize}
 %\item datasets
@@ -18,7 +19,9 @@ Dimuon spectra were built in the $\eta$ and $p_T$ bins described in
 Table~\ref{tab:eta_bins} and~\ref{tab:pt_bins} respectively. 
 Spectra were filled if at least one muon fullfilled the
 kinematic requirement, e.g. integrating over the kinematic of the
-second muon.
+second muon. \\
+Examples of fit to the dimuon spectrum of $J/\psi,\, \Upsilon(1S),\, Z$ can be found in 
+Figures \ref{fig:JPsiFitExample}, \ref{fig:UpsilonFitExample} and \ref{fig:ZFitExample} respectively.
 %%%%%%%
 \begin{table}[hbH]
 \begin{center}
@@ -71,15 +74,17 @@ $\eta$ and $p_T$. These deviations are anyway below 0.1\% within the
 statistical error from the fit to the resonance.
 \begin{figure}[hbtp]  
 \begin{center}
-\includegraphics[width=0.7\textwidth]{figures/H4l_Style/2012_22Jan2013ReReco/ScaleEta_afterCorrection_V2}
-\includegraphics[width=0.7\textwidth]{figures/H4l_Style/2012_22Jan2013ReReco/ScalePt_afterCorrection_V2} 
+\includegraphics[width=0.7\textwidth]{figures/H4l_Style/2012_22Jan2013ReReco/ScaleEta_afterCorrection_V2.pdf}
+ \end{center}\\
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/H4l_Style/2012_22Jan2013ReReco/ScalePt_afterCorrection_V2.pdf} 
+ \end{center}
  \hspace{1cm} 
    \caption{Fractional difference, data with respect simulation, of the fitted mass for the J/$\psi$,
      $\Upsilon(1S)$ and Z resonances as a function of the $|\eta|$ (top)
      and $p_T$ (bottom) of one of the two muons. Bars are the
      statistical error on the mass of the resonance from the fit.
    \label{fig:ScaleDATAMC_8TeV}}
- \end{center}
 \end{figure} 
 
 Figure~\ref{fig:ResolDATAMC_8TeV} shows the fractional difference of the fitted resolution.
@@ -89,16 +94,72 @@ Deviations are within $\pm$5\%.
 \]
 \begin{figure}[hbtp]  
 \begin{center}
-\includegraphics[width=0.7\textwidth]{figures/H4l_Style/2012_22Jan2013ReReco/ResolEta_afterCorrection_V2}
-\includegraphics[width=0.7\textwidth]{figures/H4l_Style/2012_22Jan2013ReReco/ResolPt_afterCorrection_V2} 
+\includegraphics[width=0.7\textwidth]{figures/H4l_Style/2012_22Jan2013ReReco/ResolEta_afterCorrection_V2.pdf}
+\end{center}\\
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/H4l_Style/2012_22Jan2013ReReco/ResolPt_afterCorrection_V2.pdf} 
+\end{center}
  \hspace{1cm} 
    \caption{Fractional difference, data with respect simulation, of the fitted resolution for the J/$\psi$,
      $\Upsilon(1S)$ and Z resonances as a function of the $|\eta|$ (top)
      and $p_T$ (bottom) of one of the two muons. Bars are the
      statistical error on the resolution on the resonance from the fit.
    \label{fig:ResolDATAMC_8TeV}}
- \end{center}
 \end{figure} 
 
 
+\begin{figure}
+  \begin{center}
+    \subfigure[Monte Carlo sample]{
+      \includegraphics[height=0.4\textheight]{figures/fits_JPsivsPt_mc.pdf}
+      \label{fig:JPsiFitExample_MC}
+      \hspace{1cm} 
+    }\\
+    \subfigure[data sample]{
+      \includegraphics[height=0.4\textheight]{figures/fits_JPsivsPt_data.pdf}
+      \label{fig:JPsiFitExample_DATA}
+      \hspace{1cm} 
+    }
+  \end{center}
+  \caption{Examples of fits to the dimuon spectrum in the $J/\psi$ region in different $p_{T}$ bins 
+    for Monte Carlo \subref{fig:JPsiFitExample_MC} and data \subref{fig:JPsiFitExample_DATA}.
+    \label{fig:JPsiFitExample}}
+\end{figure} 
 
+
+\begin{figure}
+  \begin{center}
+    \subfigure[Monte Carlo sample]{
+      \includegraphics[height=0.4\textheight]{figures/fits_YvsPt_mc.pdf}
+      \label{fig:UpsilonFitExample_MC}
+      \hspace{1cm} 
+    }\\
+    \subfigure[data sample]{
+      \includegraphics[height=0.4\textheight]{figures/fits_YvsPt_data.pdf}
+      \label{fig:UpsilonFitExample_DATA}
+      \hspace{1cm} 
+    }
+  \end{center}
+  \caption{Examples of fits to the dimuon spectrum in the $Y$ region in different $p_{T}$ bins 
+    for Monte Carlo \subref{fig:UpsilonFitExample_MC} and data \subref{fig:UpsilonFitExample_DATA}.
+    \label{fig:UpsilonFitExample}}
+\end{figure} 
+
+
+\begin{figure}
+  \begin{center}
+    \subfigure[Monte Carlo sample]{
+      \includegraphics[height=0.4\textheight]{figures/fits_ZvsPt_mc.pdf}
+      \label{fig:ZFitExample_MC}
+      \hspace{1cm} 
+    }\\
+    \subfigure[data sample]{
+      \includegraphics[height=0.4\textheight]{figures/fits_ZvsPt_data.pdf}
+      \label{fig:ZFitExample_DATA}
+      \hspace{1cm} 
+    }
+  \end{center}
+  \caption{Examples of fits to the dimuon spectrum in the $Z$ region in different $p_{T}$ bins 
+    for Monte Carlo \subref{fig:ZFitExample_MC} and data \subref{fig:ZFitExample_DATA}.
+    \label{fig:ZFitExample}}
+\end{figure} 

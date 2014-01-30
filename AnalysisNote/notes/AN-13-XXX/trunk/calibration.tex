@@ -1,9 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Calibration strategy}
+\label{sec:calibration}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The MuScleFit algorithm~\cite{CMS_AN_2010-059} uses the spectrum of dimuons from the decay of
-reference resonances to determine biases in the momentum assigned to
-charged tracks and to estimate its resolution.
 For the calibration procedure described in this note, dimuons from the decay of
 Z bosons were used. 
 The invariant mass spectrum of the dimuons 
@@ -13,7 +11,49 @@ those used in the selection of reconstructed muons, and an
 exponentially falling background. The decay constants of the
 exponential were determined separetely in 16 bins, each one corresponding to each 
 muon's pseudorapidity falling in one of the following ranges: [-2.4,-0.8], [-0.8,0], 
-[0,0.8], [0.8,2.4].
+[0,0.8], [0.8,2.4]. A 2D representation of the signal model as a function of the dimuon mass 
+and the dimuon resolution is in Figure \ref{fig:lineshape}.\\
+The datasets used, corresponding to both collision data and simulated events reconstructed in the CMS 
+detector, are listed in table \ref{tab:datasets}.
+
+%%%%%%%
+\begin{table}[hbH]
+\label{tab:datasets}
+\begin{center}
+\caption{Datasets corresponding to the different samples of data and
+  simulated events used for the study of the muon momentum scale at the LHC
+  center of mass energy of $\sqrt{s}$=7 TeV and $\sqrt{s}$=8 TeV. ``Label'' is 
+  how the samples are indicated in Table~\ref{tab:scale_parameters}.\label{tab:datasets}}
+\resizebox{\textwidth}{!}{\begin{tabular}{|llll|}
+\hline
+Energy & Type & Dataset name & Label \\
+\hline
+7 TeV & data & /DoubleMu/Run2011A-08Nov2011-v1,           &2011\_DATA\_44X      \\
+                 & data & /DoubleMu/Run2011B-19Nov2011-v1 &                     \\
+ & Monte Carlo & /DYJetsToLL\_TuneZ2\_M-50\_7TeV-madgraph-tauola/Fall11-PU\_S6\_START44\_V9B-v1                                    &2011\_MC\_44X        \\
+\hline
+8 TeV & data & /DoubleMu/Run2012A-22Jan2013-v1,     &2012ABC\_DATA\_ReReco\\
+                & data & /DoubleMuParked/Run2012B-22Jan2013-v1,    & \\ 
+                & data & /DoubleMuParked/Run2012C-22Jan2013-v1     & \\
+ & data & /DoubleMuParked/Run2012D-22Jan2013-v1                                                                             &2012D\_DATA\_ReReco\_53X  \\
+ & Monte Carlo & /DYJetsToLL\_M-50\_TuneZ2Star\_8TeV-madgraph-tarball/DR53X-PU\_S10\_START53\_V7A-v1                               &2012\_MC\_ReReco\_53X     \\
+ & Monte Carlo & /Upsilon1SToMuMu\_2MuPtEtaFilter\_tuneD6T\_8TeV-pythia6-evtgen/Summer12\_DR53X-PU\_S10\_START53\_V7A-v1           & \\
+ & Monte Carlo & /JPsiToMuMu\_2MuPtEtaFilter\_tuneD6T\_8TeV-pythia6-evtgen/Summer12\_DR53X-PU\_S10\_START53\_V7A-v2                 & \\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+\begin{figure}[hbtp]  
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/Lineshape_SURF2}
+ \hspace{1cm} 
+   \caption{Signal model used in the MuScleFit likelihood, as a function of the dimuon mass resolution
+   \label{fig:lineshape}}
+ \end{center}
+\end{figure} 
+
+
 % $\eta(\mu^+)$ $\eta(\mu^-)$ 
 %\FIXME description of MF strategy (scale no $p_0$, resolution, scale $p_0$ only, resolution) /ingredients\\
 %\FIXME quote SDittmaier
@@ -35,6 +75,7 @@ In each bin, the reconstructed invariant mass
 was fitted with the pdf described in Table~\ref{tab:fit_pdfs}: 
 the fitted pole of the Breit-Wigner was taken as the mass of the boson 
 while the sigma of the Crystal Ball was taken as the resolution.
+
 %%%%%%%
 \begin{table}[hbH]
 \begin{center}
