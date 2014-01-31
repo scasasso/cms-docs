@@ -11,22 +11,21 @@ those used in the selection of reconstructed muons, and an
 exponentially falling background. The decay constants of the
 exponential were determined separetely in 16 bins, each one corresponding to each 
 muon's pseudorapidity falling in one of the following ranges: [-2.4,-0.8], [-0.8,0], 
-[0,0.8], [0.8,2.4]. A 2D representation of the signal model as a function of the dimuon mass 
-and the dimuon resolution is in Figure \ref{fig:lineshape}.\\
+[0,0.8], [0.8,2.4]. A representation of the signal model as a function of the dimuon mass 
+and the dimuon resolution is shown in Figure \ref{fig:lineshape}.\\
 The datasets used, corresponding to both collision data and simulated events reconstructed in the CMS 
-detector, are listed in table \ref{tab:datasets}.
-
+detector, are listed in table~\ref{tab:datasets}.
 %%%%%%%
 \begin{table}[hbH]
 \label{tab:datasets}
 \begin{center}
 \caption{Datasets corresponding to the different samples of data and
-  simulated events used for the study of the muon momentum scale at the LHC
+  simulated events used for the study of the muon momentum scale at 
   center of mass energy of $\sqrt{s}$=7 TeV and $\sqrt{s}$=8 TeV. ``Label'' is 
-  how the samples are indicated in Table~\ref{tab:scale_parameters}.\label{tab:datasets}}
+  how the samples are indicated later in Table~\ref{tab:scale_parameters}.\label{tab:datasets}}
 \resizebox{\textwidth}{!}{\begin{tabular}{|llll|}
 \hline
-Energy & Type & Dataset name & Label \\
+$\sqrt{s}$ & Type & Dataset name & Label \\
 \hline
 7 TeV & data & /DoubleMu/Run2011A-08Nov2011-v1,           &2011\_DATA\_44X      \\
                  & data & /DoubleMu/Run2011B-19Nov2011-v1 &                     \\
@@ -44,6 +43,34 @@ Energy & Type & Dataset name & Label \\
 \end{center}
 \end{table}
 
+%%%%%
+
+Corrections were derived for the so-called {\it global
+  muons}~\cite{Chatrchyan:2013sba} using as $p_T$ the one measured by
+the inner silicon tracker. To ensure low contamination, reconstructed
+muons were further selected according to the criteria detailed in
+table~\ref{tab:muon_selection}
+
+\begin{table}[hbH]
+\begin{center}
+\caption{Selection of reconstructed muons.\label{tab:muon_selection}}
+\begin{tabular}{|l|ll|}
+\hline
+$\sqrt{s}$=7 TeV & Kinematics and topology:& $p_T>$ 20 GeV $|\eta|<$2.4 $d_{xy}<$ 0.2 cm \\
+                 & Isolation: & $I^{rel}_{comb}<0.15 p_T$ \\
+                 & Track quality: & $N_{hits}$  tracker $>10$ \\ && $N_{hits}$ pixel $>0$ \\&& $N_{hits}$ muons $>0$ \\&&  $\chi^2/ndof < 10$ \\
+& & $N_{mu-stations}$ matched $>1$  \\
+\hline
+$\sqrt{s}$=8 TeV & Kinematics and topology:& $p_T>$ 20 GeV $|\eta|<$2.4 $d_{xy}<$ 0.2 cm $d_{z}<$5 cm \\
+& Isolation: & $I^{PF}_{boh?}<0.12 p_T$ \\
+& Track quality: & $N_{tk-layers}$ with measurements $>5$  \\ && $N_{hits}$ pixel $>0$\\
+& & $N_{mu-stations}$ matched $>1$  \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+%%%%%
 \begin{figure}[hbtp]  
 \begin{center}
 \includegraphics[width=0.7\textwidth]{figures/Lineshape_SURF2}
@@ -135,7 +162,7 @@ where $j$ is an index running on the $\eta$ bin: [-2.4,-2.1],
 The terms in Eq.~\ref{eq:scale_function} are:
 \begin{itemize}
 \item $p_0$ corresponding to a global correction to the scale accounting for effects
-  like inaccurate knowledge of the magnetic field;
+  like the inaccurate knowledge of the magnetic field;
 \item $\delta$ representing an absolute bias in the curvature, e.g. a
   bias on the transverse momentum of the track different for negative
   and positive muons;
@@ -171,17 +198,18 @@ effects, were computed separately in 12 equally spaced bins in $\eta$.
 \subsection{Fit strategy and results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The maximization of the likelihood was performed in four steps. First
-values for the resolution function before any correction are
+values for the resolution function before any correction were
 estimated. In the second step we fit all the parameters of the correction function with
 the exception of the global scale $p_0$. Then 
-the post-correction parameters of the resolution function are obtained.
-The last step consists in fitting the global scale $p_0$. 
+the post-correction parameters of the resolution function were obtained.
+The last step consisted in fitting the global scale $p_0$. 
 The fitted parameters were found to be stable against further
 iterations of the maximization procedure.\\
 Table~\ref{tab:scale_parameters} shows the values of the 
 parameters of the correction function found by MuScleFit. 
-Coefficients $a_{1,j}$, $a_{2,j}$ and $b_j$ with magnitude smaller than
-0.000001 GeV$^{-1}$ were considered null. Similarly values
+Coefficients $a_{1,j}$, $a_{2,j}$ and $b_j$ of magnitude smaller than
+0.000001 GeV$^{-1}$ were considered null as they represent anyway 
+correction smaller than 0.1\% for tracks up to 1 TeV. Similarly values
 of $p_0$ smaller than 0.0050 were considered zero as they 
 are consistent, within the systematic uncertainty 
 computed in Section~\ref{sec:systematics}, with the null value.
@@ -194,7 +222,8 @@ computed in Section~\ref{sec:systematics}, with the null value.
   of the table correspond to the five $\eta$ bins [-2.4,-2.1],
 [-2.1,-1.5], [-1.5,+1.5], [+1.5,+2.1] and [+2.1,+2.4]. The values of
 the $b_0$ parameters are fixed to guarantee the continuity of the
-correction function at the boundaries between the $\eta$ bins.\label{tab:scale_parameters}} 
+correction function at the boundaries between the $\eta$ bins.
+Lables for the different datasets are those described in table~\cite{tab:datasets}. \label{tab:scale_parameters}} 
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
 Sample & 2011\_DATA\_44X & 2011\_MC\_44X & 2012ABC\_DATA\_ReReco\_53X & 2012D\_DATA\_ReReco\_53X & 2012\_MC\_ReReco\_53X \\
@@ -295,8 +324,8 @@ coefficient, of order unity, empirically determined.
 
 Figure~\ref{fig:MassRatio_8TeV} shows the ratio of the dimuon spectra
 in data and simulation at $\sqrt{s}$=8~TeV, before and after the calibration and smearing
-procedure. Background estimated with the exponential function of
-Table~\ref{tab:fit_pdfs} were subtracted from the spectra. Overall, after the
+procedure. Both in data and in simulation the background estimated with the exponential function of
+Table~\ref{tab:fit_pdfs} was subtracted from the spectra. Overall, after the
 correction the position of the peak is matched at the 10$^{-4}$ level
 and the resolution at the 10$^{-2}$ level.
 \begin{figure}[hbtp]  
