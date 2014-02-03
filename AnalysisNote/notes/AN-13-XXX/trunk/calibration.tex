@@ -17,7 +17,6 @@ The datasets used, corresponding to both collision data and simulated events rec
 detector, are listed in table~\ref{tab:datasets}.
 %%%%%%%
 \begin{table}[hbH]
-\label{tab:datasets}
 \begin{center}
 \caption{Datasets corresponding to the different samples of data and
   simulated events used for the study of the muon momentum scale at 
@@ -49,7 +48,17 @@ Corrections were derived for the so-called {\it global
   muons}~\cite{Chatrchyan:2013sba} using as $p_T$ the one measured by
 the inner silicon tracker. To ensure low contamination, reconstructed
 muons were further selected according to the criteria detailed in
-table~\ref{tab:muon_selection}
+table~\ref{tab:muon_selection}. In \ref{tab:muon_selection} the following
+definitions are used:
+\begin{itemize}
+\item $d_{xy}$ and $d_{z}$ are the \textit{impact parameter} calculated in the transverse 
+plane and along the $z-\mathrm{axis}$ respectively;
+\item $I^{rel}_{comb}$ is the isolation in a cone of $\Delta R =0.3$ around the muon 
+track, computed with the sum of tracks' $p_{T}$ and the energy deposits in the calorimeters;
+\item $I^{rel}_{PF}=\sum ^{ch,had}p_{T}+\mathrm{max}\left( \sum ^{neutral,had}E_{T} + \sum ^{neutral,had}E_{T} -\Delta\beta ,0 \right)$ \\
+where the sums are running over the \textit{particle flow} \cite{CMS:2010aua} candidates and 
+$\Delta \beta$ is a correction to the isolation energy due to pile-up interactions. 
+\end{itemize}
 
 \begin{table}[hbH]
 \begin{center}
@@ -62,7 +71,7 @@ $\sqrt{s}$=7 TeV & Kinematics and topology:& $p_T>$ 20 GeV $|\eta|<$2.4 $d_{xy}<
 & & $N_{mu-stations}$ matched $>1$  \\
 \hline
 $\sqrt{s}$=8 TeV & Kinematics and topology:& $p_T>$ 20 GeV $|\eta|<$2.4 $d_{xy}<$ 0.2 cm $d_{z}<$5 cm \\
-& Isolation: & $I^{PF}_{boh?}<0.12 p_T$ \\
+& Isolation: & $I^{rel}_{PF}<0.12 p_T$ \\
 & Track quality: & $N_{tk-layers}$ with measurements $>5$  \\ && $N_{hits}$ pixel $>0$\\
 & & $N_{mu-stations}$ matched $>1$  \\
 \hline
